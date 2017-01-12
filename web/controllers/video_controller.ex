@@ -24,11 +24,6 @@ defmodule Rumbl.VideoController do
       |> build_assoc(:videos)
       |> Video.changeset()
 
-    IO.puts "TEST"
-    mytest = "hi"
-    assign(conn, :mytest, mytest)
-    IO.puts conn.assigns[:mytest]
-
     render(conn, "new.html", changeset: changeset)
   end
 
